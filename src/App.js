@@ -8,6 +8,11 @@ import { Container, Row } from "react-bootstrap";
 import Myfantasy from "./component/Myfantasy";
 import Myhistory from "./component/Myhistory";
 import Myalert from "./component/Myalert";
+import Mybooklist from "./component/Mybooklist";
+import fantasy from "./data/fantasy.json";
+import history from "./data/history.json";
+
+const books = [...fantasy, ...history];
 
 function App() {
   return (
@@ -23,8 +28,7 @@ function App() {
       <main>
         <Container>
           <Row className="d-flex justify-content-center pt-3">
-            <Myfantasy />
-            <Myhistory />
+            <Mybooklist books={books} />
           </Row>
         </Container>
       </main>

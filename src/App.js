@@ -5,14 +5,13 @@ import Mynavbar from "./component/Mynavbar";
 import Myfooter from "./component/Myfooter";
 
 import { Container, Row } from "react-bootstrap";
-import Myfantasy from "./component/Myfantasy";
-import Myhistory from "./component/Myhistory";
 import Myalert from "./component/Myalert";
 import Mybooklist from "./component/Mybooklist";
 import fantasy from "./data/fantasy.json";
 import history from "./data/history.json";
+import Searchbar from "./component/Myserchbar";
 
-const books = [...fantasy, ...history];
+const books = [...fantasy];
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
         <Container fluid>
           <Row>
             <Mynavbar />
+            <Searchbar />
           </Row>
         </Container>
         <Myalert />
